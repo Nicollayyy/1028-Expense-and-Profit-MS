@@ -12,8 +12,8 @@ It provides real-time tracking, reporting, and visualization of financial data.
 
 ## 🛠️ System Architecture
 The system follows a 3-tier architecture:
-- **Presentation Layer**: Web interface (HTML, CSS, PHP, JavaScript)  
-- **Application Layer**: PHP backend logic (orders, OTP validation, reporting)  
+- **Presentation Layer**: Web interface (HTML, CSS, PHP)  
+- **Application Layer**: PHP backend logic (sales and Profit, OTP validation, reporting)  
 - **Data Layer**: MySQL database  
 
 ## 🎯 Objectives
