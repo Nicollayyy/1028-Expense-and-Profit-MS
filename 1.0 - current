@@ -1,0 +1,47 @@
+CREATE DATABASE expense_profit_monitoring;
+USE expense_profit_monitoring;
+
+-- 1. ADMIN TABLE
+CREATE TABLE admin (
+  admin_id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(20) NOT NULL
+);
+
+-- 2. PROFITS TABLE
+CREATE TABLE profits (
+  profit_id INT AUTO_INCREMENT PRIMARY KEY,
+  source VARCHAR(100) NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  date DATE NOT NULL,
+  notes TEXT
+);
+
+-- 3. EXPENSES TABLE
+CREATE TABLE expenses (
+  expense_id INT AUTO_INCREMENT PRIMARY KEY,
+  category VARCHAR(100) NOT NULL,
+  description TEXT,
+  amount DECIMAL(10,2) NOT NULL,
+  date DATE NOT NULL
+);
+
+-- 4. PRODUCTS TABLE
+CREATE TABLE products (
+  product_id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  category VARCHAR(100),
+  price DECIMAL(10,2) NOT NULL,
+  stock INT DEFAULT 0,
+  date_added DATE DEFAULT CURRENT_DATE
+);
+
+-- 5. FILES TABLE (FOR GOOGLE DRIVE INTEGRATION)
+CREATE TABLE files (
+  file_id INT AUTO_INCREMENT PRIMARY KEY,
+  file_name VARCHAR(255) NOT NULL,
+  file_path VARCHAR(255) NOT NULL,
+  drive_link VARCHAR(255),
+  upload_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
