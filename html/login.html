@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expense and Profit Monitoring – 1028 Café</title>
+    <link rel="stylesheet" href="./../css/login.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Expense and Profit Monitoring System</h1>
+    <p class="subtitle">1028 Café – Admin Login</p>
+
+    <form method="post" action="./../login.php" id="loginForm" novalidate>
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Enter your username" required />
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="toggle-wrap">
+          <input id="password" name="password" type="password" placeholder="Enter your password" required />
+          <button type="button" class="toggle-show" id="showBtn">Show</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="remember"><input type="checkbox" name="remember" /> Remember me</label>
+        <a class="link" href="./forgot_password.html">Forgot password?</a>
+      </div>
+
+      <button class="btn" type="submit" name="login">Sign in</button>
+    </form>
+  </main>
+
+  <script>
+    const pwd = document.getElementById('password');
+    const btn = document.getElementById('showBtn');
+
+    btn.addEventListener('click', () => {
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+        btn.textContent = 'Hide';
+      } else {
+        pwd.type = 'password';
+        btn.textContent = 'Show';
+      }
+    });
+  </script>
+</body>
+</html>
