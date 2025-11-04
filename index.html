@@ -1,4 +1,3 @@
-<?php include 'fetch_expenses.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-
   <div class="container py-4">
     <h2 class="text-center mb-4">Expense Monitoring System</h2>
 
@@ -28,7 +26,7 @@
           </div>
 
           <div class="col-md-4">
-            <input type="number" name="amount" step="0.01" min="100" max="5000" class="form-control" placeholder="Amount (₱100 - ₱5000)" required>
+            <input type="number" name="amount" class="form-control" placeholder="Amount" required>
           </div>
 
           <div class="col-md-3">
@@ -43,7 +41,7 @@
     </div>
 
     <!-- Expense List -->
-    <div class="card shadow-sm">
+    <div class="card mb-4 shadow-sm">
       <div class="card-header bg-secondary text-white">Expense List</div>
       <div class="card-body">
         <table class="table table-bordered table-striped text-center">
@@ -56,28 +54,44 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>
-            <?php if (!empty($expenses)): ?>
-              <?php foreach ($expenses as $r): ?>
-                <tr>
-                  <td><?= $r['id']; ?></td>
-                  <td><?= htmlspecialchars($r['category']); ?></td>
-                  <td><?= number_format($r['amount'], 2); ?></td>
-                  <td><?= htmlspecialchars($r['date_added']); ?></td>
-                  <td>
-                    <a href="delete_expense.php?id=<?= $r['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Delete this record?')">Delete</a>
-                  </td>
-                </tr>
-              <?php endforeach; ?>
-            <?php else: ?>
-              <tr><td colspan="5">No expenses recorded yet.</td></tr>
-            <?php endif; ?>
+          <tbody id="expense-table-body">
+            <tr><td colspan="5">Loading...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
   </div>
+
+<script>
+function loadExpenses() {
+  fetch("fetch_expenses.php")
+    .then(res => res.json())
+    .then(data => {
+      let tbody = document.getElementById("expense-table-body");
+      tbody.innerHTML = "";
+
+      if (data.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5">No expenses recorded yet.</td></tr>`;
+        return;
+      }
+
+      data.forEach(r => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${r.id}</td>
+            <td>${r.category}</td>
+            <td>${parseFloat(r.amount).toFixed(2)}</td>
+            <td>${r.date_added}</td>
+            <td><a href="delete_expense.php?id=${r.id}" class="btn btn-danger btn-sm" onclick="return confirm('Delete this record?')">Delete</a></td>
+          </tr>
+        `;
+      });
+    });
+}
+
+loadExpenses();
+</script>
 
 </body>
 </html>

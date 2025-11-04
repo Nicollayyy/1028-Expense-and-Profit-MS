@@ -1,10 +1,9 @@
 <?php
-include 'expense_monitoring.php';
+require "expense_monitoring.php";
 
-if (isset($_GET['id'])) {
-    $id = (int)$_GET['id'];
-    $conn->query("DELETE FROM expenses WHERE id = $id");
-}
+$id = intval($_GET['id']);
+$stmt = $conn->prepare("DELETE FROM expenses WHERE id = ?");
+$stmt->execute([$id]);
 
-header("Location: index.php");
-exit();
+header("Location: index.html");
+exit;

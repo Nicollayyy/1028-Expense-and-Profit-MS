@@ -1,9 +1,8 @@
 <?php
 include 'expense_monitoring.php';
 
-$expenses = [];
-$result = $conn->query("SELECT * FROM expenses ORDER BY date_added DESC, id DESC");
+$stmt = $conn->prepare("SELECT * FROM expenses ORDER BY id DESC");
+$stmt->execute();
+$expenses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-if ($result && $result->num_rows > 0) {
-    $expenses = $result->fetch_all(MYSQLI_ASSOC);
-}
+echo json_encode($expenses);
