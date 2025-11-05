@@ -1,8 +1,8 @@
 <?php
 include 'db.php';
 
-$username = 'ashmrls22';
-$password = password_hash('12345', PASSWORD_DEFAULT); // ✅ Hashes password securely
+$username = 'admin';
+$password = password_hash('admin123', PASSWORD_DEFAULT); // ✅ Hashes password securely
 $phone_number = '09474427459';
 
 $query = "INSERT INTO admin (username, password, phone_number) VALUES (?, ?, ?)";

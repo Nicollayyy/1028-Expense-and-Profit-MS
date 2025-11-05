@@ -20,13 +20,14 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $row['password'])) {
             $_SESSION['admin_id'] = $row['admin_id'];
             $_SESSION['username'] = $row['username'];
+            // redirect to the protected PHP dashboard which will include the HTML dashboard
             header("Location: dashboard.php");
             exit();
         } else {
-            echo "<script>alert('Incorrect username or password'); window.location='login.html';</script>";
+            echo "<script>alert('Incorrect username or password'); window.location='html/login.html';</script>";
         }
     } else {
-        echo "<script>alert('Incorrect username or password'); window.location='login.html';</script>";
+        echo "<script>alert('Incorrect username or password'); window.location='html/login.html';</script>";
     }
 }
 ?>
