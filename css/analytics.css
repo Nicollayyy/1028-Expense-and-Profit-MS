@@ -1,0 +1,17 @@
+/* Analytics page specific styles */
+:root { --brown:#4a3728; --muted:#efe6df; --text:#302014; }
+
+body { font-family: "Times New Roman", Times, serif; background:#f6f4f2; }
+
+.analytics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.analytics-card { background: #fff; padding: 14px; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.analytics-card h5 { margin: 0 0 8px 0; color: var(--text); font-weight: 700; }
+.analytics-card canvas { width: 100% !important; height: 220px !important; }
+.analytics-card.wide { grid-column: 1 / -1; }
+
+@media (max-width: 920px) {
+  .analytics-grid { grid-template-columns: 1fr; }
+  .analytics-card canvas { height: 260px !important; }
+}
+
+.content-title { margin-bottom: 12px; }

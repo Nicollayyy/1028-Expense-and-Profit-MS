@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Times New Roman", Times, serif;
+  /* keep the overall page fixed; content will be sized to fit */
+  overflow: hidden;
+}
+
+/* Header and sidebar styles are provided by dashboard.css to keep the
+   header/sidebar consistent across pages. Profit-specific rules start below. */
+/* Header and sidebar styles are provided by dashboard.css to keep the
+  header/sidebar consistent across pages. Profit-specific rules start below. */
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding: 18px;
+  background-color: #e8e8e8;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.content-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #999;
+  padding-bottom: 8px;
+}
+
+/* Profit-specific content styles to match dashboard panels/cards */
+.button-container .btn-add-profit {
+  background: #4a3728;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button-container .btn-add-profit:hover { background: #6b4c3b; }
+
+.table-container {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 100%;
+}
+.table-container .table-label {
+  font-weight: 700;
+  color: #302014;
+  margin-bottom: 8px;
+}
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.product-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+.product-table td {
+  padding: 12px 10px;
+  vertical-align: middle;
+  font-size: 1rem;
+  color: #333;
+}
+.action-cell { text-align: right; }
+.action-cell .btn-view-details,
+.action-cell .btn-delete {
+  background: transparent;
+  border: 1px solid #4a3728;
+  color: #4a3728;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.action-cell .btn-view-details:hover,
+.action-cell .btn-delete:hover {
+  background: #4a3728; color: #fff;
+}
+
+/* Keep table scrollable if many rows */
+.table-container { max-height: 58vh; overflow: auto; }
+/* (Dashboard cards, charts and responsive rules are defined in dashboard.css)
+   Keeping profit.css small and only for profit-specific components prevents
+   accidental overrides of font sizes, margins and borders. */
+

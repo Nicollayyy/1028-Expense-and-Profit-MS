@@ -1,0 +1,72 @@
+/* File Manager specific styles only — header/sidebar/layout come from dashboard.css */
+:root{
+  --brown-900:#3a231c;
+  --brown-700:#4a3728;
+  --brown-600:#7c4a3e;
+  --card:#ffffff;
+}
+
+.panel{background:var(--card);padding:22px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.panel h2{font-size:22px;margin:0 0 8px;color:var(--brown-900)}
+.panel .hr{height:2px;background:#999;margin:10px 0 18px;opacity:0.25}
+.upload-wrap{text-align:center;padding:30px 0}
+.btn-upload{background:var(--brown-700);color:#fff;border:none;padding:10px 28px;border-radius:8px;cursor:pointer;font-weight:700}
+.btn-upload:hover{background:var(--brown-600)}
+
+.file-list-wrap{margin-top:18px}
+.file-list{display:flex;flex-direction:column;gap:10px}
+.file-list{display:flex;flex-direction:column;gap:12px}
+
+/* Grid view for files */
+.file-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:8px}
+.file-card{background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.06);display:flex;flex-direction:column;gap:10px}
+.file-thumb{height:110px;border-radius:8px;background:#f3efe9;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.file-thumb img{max-width:100%;max-height:100%;object-fit:cover}
+.file-meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.file-name{font-weight:700;color:var(--brown-900);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-sub{font-size:0.9rem;color:#666}
+.file-actions{display:flex;gap:8px;align-items:center}
+.file-actions a, .file-actions button{background:transparent;border:1px solid var(--brown-700);color:var(--brown-700);padding:8px 12px;border-radius:8px;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.file-actions a:hover, .file-actions button:hover{background:var(--brown-700);color:#fff}
+
+/* Specific button styles */
+.btn-download{border-color:#2e7d32;color:#2e7d32}
+.btn-download:hover{background:#2e7d32;color:#fff}
+.btn-download i{color:inherit}
+
+.btn-delete{border-color:#c62828;color:#c62828}
+.btn-delete:hover{background:#c62828;color:#fff}
+.btn-delete i{color:inherit}
+
+.folder-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.folder-pill{padding:6px 12px;border-radius:999px;background:transparent;border:1px solid #e6ddd4;color:var(--brown-700);cursor:pointer;font-weight:600}
+.folder-pill.active{background:var(--brown-700);color:#fff;border-color:var(--brown-700)}
+
+.empty{color:#666;padding:18px;text-align:center}
+
+/* view toggle */
+.view-toggle{display:flex;gap:8px;align-items:center}
+.view-btn{background:transparent;border:1px solid #e6ddd4;color:var(--brown-700);padding:6px 10px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.view-btn.active{background:var(--brown-700);color:#fff;border-color:var(--brown-700)}
+
+/* table view styles */
+.file-table-wrap{margin-top:8px}
+.file-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,0.05)}
+.file-table thead th{background:#faf6f3;padding:10px 12px;text-align:left;color:var(--brown-900);font-weight:700;border-bottom:1px solid #efe6df}
+.file-table tbody td{padding:12px;border-bottom:1px solid #f1ece7;vertical-align:middle}
+.file-table tbody tr:last-child td{border-bottom:none}
+.file-table .col-size{text-align:right;width:110px}
+.file-table .col-category{text-align:center;width:140px}
+.file-table .col-actions{text-align:right;width:170px}
+
+@media (max-width:720px){
+  .file-table thead{display:none}
+  .file-table tbody td{display:block;padding:10px}
+  .file-table tbody tr{margin-bottom:12px;border-bottom:1px solid #eee}
+}
+
+.empty{color:#666;padding:18px;text-align:center}
+
+@media (max-width:720px){
+  .content{padding:16px}
+}
