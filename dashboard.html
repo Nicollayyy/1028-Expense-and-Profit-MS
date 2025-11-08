@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1028 Tea and Cafe - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="brand">
+            <img src="../assets/logo.jpg" alt="Logo">
+            <span>1028 Tea and Cafe</span>
+        </div>
+
+        <div class="admin-profile" id="adminProfile">
+            <div class="admin-text">
+                <div class="label">Welcome</div>
+                <div class="name">Admin</div>
+            </div>
+            <button class="profile-toggle" id="profileToggle" aria-expanded="false">
+                <i class="fas fa-user-circle" style="font-size: 2rem;"></i>
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown">
+                <button class="dropdown-logout" onclick="alert('Logout clicked')">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a class="nav-item active" href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dash Board</span>
+            </a>
+            <a class="nav-item" href="../profit.php">
+                <i class="fas fa-chart-line"></i>
+                <span>View Profit</span>
+            </a>
+            <a class="nav-item" href="expenses.html">
+                <i class="fas fa-money-bill"></i>
+                <span>View Expenses</span>
+            </a>
+            <a class="nav-item" href="products.html">
+                <i class="fas fa-box"></i>
+                <span>Products</span>
+            </a>
+            <a class="nav-item" href="file_manager.html">
+                <i class="fas fa-folder"></i>
+                <span>File Manager</span>
+            </a>
+            <a class="nav-item" href="analytics.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Analytics</span>
+            </a>
+            <a class="nav-item" href="../logout.php">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <div class="content-title">Dash Board</div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="card-box">
+                    <h3>Today's Sales</h3>
+                    <div class="amount">₱ 10,973</div>
+                </div>
+                <div class="card-box">
+                    <h3>Monthly Expenses</h3>
+                    <div class="amount">₱ 3,072</div>
+                </div>
+                <div class="card-box">
+                    <h3>File Manager</h3>
+                    <a href="file_manager.html">View Details</a>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-container">
+                <div class="chart-box">
+                    <h5>Expense Distribution</h5>
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h5>Sales Analytics</h5>
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+
+            <!-- System Title -->
+            <div class="system-title">EXPENSE AND PROFIT MANAGEMENT SYSTEM</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
