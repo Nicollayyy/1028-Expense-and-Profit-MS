@@ -1,0 +1,112 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    z-index: -1;
+  }
+  
+  /* Header, Sidebar, Content */
+  .header {
+    background-color: rgba(48, 32, 20, 0.9);
+    color: white;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  
+  .main-container {
+    display: flex;
+    height: calc(100vh - 64px);
+  }
+  
+  .sidebar {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+  }
+  
+  /* Sidebar Nav */
+  .nav-item {
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #333;
+    border-left: 4px solid transparent;
+    transition: 0.2s;
+  }
+  
+  .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .nav-item.active {
+    background-color: #4a3728;
+    color: white;
+    border-left: 4px solid #4a3728;
+    border-radius: 0 12px 12px 0;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+  }
+  
+  /* Dashboard cards and charts */
+  .dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  
+  .card-box {
+    background-color: #302014;
+    color: white;
+    padding: 18px 16px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  
+  .chart-box {
+    background: white;
+    padding: 14px;
+    border-radius: 10px;
+    min-height: 260px;
+  }
+  
+  .chart-box canvas {
+    width: 100% !important;
+    height: 220px !important;
+  }
+
+  
+  
+
+  

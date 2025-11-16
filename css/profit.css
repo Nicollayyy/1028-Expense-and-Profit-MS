@@ -1,0 +1,170 @@
+/* View Profit — matches View Expenses background style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ✅ Match View Expenses background */
+body {
+  background-color: #f5f5f5;
+  font-family: "Times New Roman", Times, serif;
+  overflow: hidden;
+}
+
+/* Remove frosted glass overlay — use solid bg instead */
+body::before {
+  content: none;
+}
+
+/* Main Content Area */
+.content {
+  flex: 1;
+  padding: 24px;
+  background: transparent; /* ✅ no blur, same as expenses */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #302014; /* ✅ readable dark text on light background */
+  animation: fadeInSoft 0.6s ease both;
+}
+
+/* Fade-in Animation (optional) */
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add Profit Button */
+.button-container .btn-add-profit {
+  background: #4a3728;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button-container .btn-add-profit:hover {
+  background: #6b4c3b;
+}
+
+/* Table Container — same as View Expenses */
+.table-container {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 100%;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+/* Table Label */
+.table-container .table-label {
+  font-weight: 700;
+  color: #302014;
+  margin-bottom: 8px;
+}
+
+/* Profit Table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table thead th {
+  text-align: left;
+  padding: 10px;
+  font-weight: 700;
+  color: #302014;
+}
+
+.product-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.product-table td {
+  padding: 12px 10px;
+  vertical-align: middle;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Action Buttons */
+.action-cell {
+  text-align: right;
+}
+
+.action-cell .btn-view-details,
+.action-cell .btn-delete {
+  background: transparent;
+  border: 1px solid #4a3728;
+  color: #4a3728;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.action-cell .btn-view-details:hover,
+.action-cell .btn-delete:hover {
+  background: #4a3728;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 720px) {
+  .action-cell { text-align: left; }
+}
+
+/* ✅ Logo + Title */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid #d9b382;
+  background: #000;
+  padding: 3px;
+}
+
+.brand span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+/* Inline styles moved from html/profit.html */
+.logo-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.header-title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
