@@ -1,0 +1,135 @@
+2025-11-16T04:33:01+01:00 - inserted id=23
+Array
+(
+    [date] => 2025-11-20
+    [category] => utilities
+    [description] => haa
+    [amount] => 1222
+)
+
+2025-11-16T04:33:26+01:00 - inserted id=24
+Array
+(
+    [date] => 2025-11-29
+    [category] => utilities
+    [description] => haa
+    [amount] => 1272
+)
+
+2025-11-16T04:40:01+01:00 - inserted id=25
+Array
+(
+    [date] => 2025-11-29
+    [category] => utilities
+    [description] => haa
+    [amount] => 1272
+)
+
+2025-11-16T04:42:56+01:00 - inserted id=26
+Array
+(
+    [date] => 2025-11-06
+    [category] => utilities
+    [description] => haa
+    [amount] => 1272
+)
+
+2025-11-16T04:44:52+01:00 - inserted id=27
+Array
+(
+    [date] => 2025-11-01
+    [category] => utilities
+    [description] => haa
+    [amount] => 1272
+)
+
+2025-11-16T04:51:29+01:00 - inserted id=28
+Array
+(
+    [date] => 2025-11-08
+    [category] => inventory
+    [description] => sa
+    [amount] => 1222
+)
+
+2025-11-16T04:58:15+01:00 - inserted id=29
+Array
+(
+    [date] => 2025-11-06
+    [category] => zh
+    [description] => aukA
+    [amount] => 111
+)
+
+2025-11-16T05:02:58+01:00 - inserted id=30
+Array
+(
+    [date] => 2025-11-13
+    [category] => sas
+    [description] => s
+    [amount] => 122
+)
+
+2025-11-16T05:03:29+01:00 - inserted id=31
+Array
+(
+    [date] => 2025-11-20
+    [category] => utilities
+    [description] => haa
+    [amount] => 09877
+)
+
+2025-11-16T05:38:16+01:00 - inserted id=39
+Array
+(
+    [date] => 2025-11-08
+    [category] => w
+    [description] => efrwe
+    [amount] => 233
+)
+
+2025-11-16T06:20:47+01:00 - inserted id=40
+Array
+(
+    [date] => 2025-11-08
+    [category] => da
+    [description] => dafa
+    [amount] => 1223
+)
+
+2025-11-16T06:26:56+01:00 - inserted id=41
+Array
+(
+    [date] => 2025-11-06
+    [category] => utilities
+    [description] => sjhs
+    [amount] => 199
+)
+
+2025-11-16T06:30:21+01:00 - inserted id=42
+Array
+(
+    [date] => 2025-11-15
+    [category] => sww
+    [description] => sqs
+    [amount] => 12
+)
+
+2025-11-16T06:34:04+01:00 - inserted id=43
+Array
+(
+    [date] => 2025-12-13
+    [category] => fdd
+    [description] => ghg
+    [amount] => 15
+)
+
+2025-11-16T06:35:45+01:00 - inserted id=44
+Array
+(
+    [date] => 2025-11-08
+    [category] => dd
+    [description] => fdsa
+    [amount] => 2344
+)
+
